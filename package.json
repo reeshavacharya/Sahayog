@@ -16,6 +16,7 @@
   "dependencies": {
     "@radix-ui/react-slot": "^1.0.2",
     "@tailwindcss/forms": "^0.5.7",
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
     "@typescript-eslint/eslint-plugin": "^7.13.0",
     "autoprefixer": "^10.4.19",
     "class-variance-authority": "^0.7.0",
@@ -27,6 +28,7 @@
     "next": "14.2.4",
     "next-auth": "^4.24.7",
     "postcss-loader": "^8.1.1",
+    "prettier-plugin-tailwindcss": "^0.6.4",
     "react": "^18",
     "react-dom": "^18",
     "react-use": "^17.5.0",

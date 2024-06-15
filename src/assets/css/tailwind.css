@@ -10,7 +10,7 @@
 
     html,
     body {
-        @apply bg-brand-100 font-inter dark:bg-dark antialiased dark:text-white;
+        @apply bg-brand-100 font-inter antialiased dark:bg-dark dark:text-white;
     }
 
     .dynamic-html h6 {
@@ -108,35 +108,35 @@ input.spin-button-hidden::-webkit-inner-spin-button {
 }
 
 .h1 {
-    @apply text-black-900 text-[96px] font-semibold leading-[130px] tracking-[-1%];
+    @apply text-[96px] font-semibold leading-[130px] tracking-[-1%] text-black-900;
 }
 
 .h2 {
-    @apply text-black-900 text-[48px] font-semibold leading-[72px];
+    @apply text-[48px] font-semibold leading-[72px] text-black-900;
 }
 
 .h2-new {
-    @apply text-black-900 text-[24px] font-semibold leading-[36px];
+    @apply text-[24px] font-semibold leading-[36px] text-black-900;
 }
 
 .h3 {
-    @apply text-black-900 text-[36px] font-semibold leading-[54px];
+    @apply text-[36px] font-semibold leading-[54px] text-black-900;
 }
 
 .h3-new {
-    @apply text-black-900 text-[20px] font-semibold leading-[30px];
+    @apply text-[20px] font-semibold leading-[30px] text-black-900;
 }
 
 .h4 {
-    @apply text-black-900 text-[24px] font-semibold leading-[36px];
+    @apply text-[24px] font-semibold leading-[36px] text-black-900;
 }
 
 .h4-new {
-    @apply text-black-900 text-[16px] font-semibold leading-[24px];
+    @apply text-[16px] font-semibold leading-[24px] text-black-900;
 }
 
 .h5 {
-    @apply text-black-900 text-[20px] font-semibold leading-[30px];
+    @apply text-[20px] font-semibold leading-[30px] text-black-900;
 }
 
 .h5-new {
@@ -144,54 +144,54 @@ input.spin-button-hidden::-webkit-inner-spin-button {
 }
 
 .h6 {
-    @apply text-black-900 text-[16px] font-semibold leading-[24px];
+    @apply text-[16px] font-semibold leading-[24px] text-black-900;
 }
 
 .sh1 {
     leading-trim: both;
-    @apply text-black-900 text-[20px] font-semibold leading-[30px];
+    @apply text-[20px] font-semibold leading-[30px] text-black-900;
 }
 
 .sh2 {
-    @apply text-black-900 text-[20px] leading-[36px];
+    @apply text-[20px] leading-[36px] text-black-900;
 }
 
 .sh3 {
-    @apply text-black-900 text-[18px] font-semibold leading-[30px];
+    @apply text-[18px] font-semibold leading-[30px] text-black-900;
 }
 
 .body1 {
     leading-trim: both;
-    @apply text-black-900 text-[16px] font-medium leading-[30px];
+    @apply text-[16px] font-medium leading-[30px] text-black-900;
 }
 
 .body2 {
-    @apply text-black-900 text-[16px] font-normal leading-[30px];
+    @apply text-[16px] font-normal leading-[30px] text-black-900;
 }
 
 .body3 {
     leading-trim: both;
-    @apply text-black-900 text-[16px] font-normal leading-[30px];
+    @apply text-[16px] font-normal leading-[30px] text-black-900;
 }
 
 .body4 {
     leading-trim: both;
-    @apply text-black-900 text-[14px] font-normal leading-[24px];
+    @apply text-[14px] font-normal leading-[24px] text-black-900;
 }
 
 .body5 {
     leading-trim: both;
-    @apply text-black-900 text-[12px] font-normal leading-[20px];
+    @apply text-[12px] font-normal leading-[20px] text-black-900;
 }
 
 .body6 {
     leading-trim: both;
-    @apply text-black-900 text-[14px] font-medium leading-[24px];
+    @apply text-[14px] font-medium leading-[24px] text-black-900;
 }
 
 p {
     leading-trim: both;
-    @apply text-black-900 text-[18px] font-normal leading-[30px];
+    @apply text-[18px] font-normal leading-[30px] text-black-900;
 }
 
 .p1 {
@@ -200,7 +200,7 @@ p {
 
 .p2 {
     leading-trim: both;
-    @apply text-black-900 text-[14px] font-normal leading-[21px];
+    @apply text-[14px] font-normal leading-[21px] text-black-900;
 }
 
 .p2-new {
@@ -229,7 +229,7 @@ p {
 }
 
 .navbar {
-    @apply border-brand-200 bg-brand-100 fixed top-0 flex h-16 w-full items-center justify-center border border-x-0 border-b-[1px] border-t-0 lg:h-[84px];
+    @apply fixed top-0 flex h-16 w-full items-center justify-center border border-x-0 border-b-[1px] border-t-0 border-brand-200 bg-brand-100 lg:h-[84px];
 }
 
 .navbar-link {
@@ -240,17 +240,17 @@ p {
 .primary-btn {
     leading-trim: both;
     /*z-index: 100 !important;*/
-    @apply bg-brand-500 hover:bg-brand-600 flex cursor-pointer items-center justify-center gap-1 rounded-[4px] px-[16px] py-[12px] text-[16px] font-normal leading-[30px] text-white no-underline;
+    @apply flex cursor-pointer items-center justify-center gap-1 rounded-[4px] bg-brand-500 px-[16px] py-[12px] text-[16px] font-normal leading-[30px] text-white no-underline hover:bg-brand-600;
 }
 
 .primary-outline-btn {
     leading-trim: both;
     /*z-index: 100 !important;*/
-    @apply border-brand-500 text-brand-500 hover:bg-brand-500 flex cursor-pointer items-center justify-center gap-1 rounded-[4px] border-[1px] bg-transparent px-[16px] py-[12px] text-[16px] font-normal leading-[30px] no-underline hover:text-white;
+    @apply flex cursor-pointer items-center justify-center gap-1 rounded-[4px] border-[1px] border-brand-500 bg-transparent px-[16px] py-[12px] text-[16px] font-normal leading-[30px] text-brand-500 no-underline hover:bg-brand-500 hover:text-white;
 }
 
 .secondary-pill {
-    @apply bg-brand-200 flex h-[36px] items-center justify-center gap-1 rounded-[50px] px-[20px] py-[12px] uppercase;
+    @apply flex h-[36px] items-center justify-center gap-1 rounded-[50px] bg-brand-200 px-[20px] py-[12px] uppercase;
 }
 
 .paragraph {
@@ -259,7 +259,7 @@ p {
 
 .tag {
     leading-trim: both;
-    @apply bg-brand-200 flex h-[26px] items-center justify-center gap-1 rounded-[50px] p-2 text-[14px] font-normal leading-[24px];
+    @apply flex h-[26px] items-center justify-center gap-1 rounded-[50px] bg-brand-200 p-2 text-[14px] font-normal leading-[24px];
 }
 
 .swiper {
@@ -283,7 +283,7 @@ p {
 }
 
 .swiper-scrollbar-drag {
-    @apply dark:bg-light-dark relative rounded bg-gray-900;
+    @apply relative rounded bg-gray-900 dark:bg-light-dark;
 }
 
 .swiper-horizontal .swiper-scrollbar-drag {

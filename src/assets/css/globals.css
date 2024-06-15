@@ -25,7 +25,9 @@ body {
     padding: 0;
     margin: 0;
     font-family: 'Inter', sans-serif;
-    --font-sans-serif: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    --font-sans-serif: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+        'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
     --font-serif: Georgia, Times, serif;
     --font-mono: Menlo, Courier, monospace;
 }
@@ -166,10 +168,18 @@ div::-webkit-scrollbar-thumb:hover {
 
 .prompt-input-wrapper {
     &:hover {
-        background-image: linear-gradient(135.6deg, #FE3678 0%, #0764EB 98.97%) !important;
+        background-image: linear-gradient(
+            135.6deg,
+            #fe3678 0%,
+            #0764eb 98.97%
+        ) !important;
     }
 
     &:focus-within {
-        background-image: linear-gradient(135.6deg, #FE3678 0%, #0764EB 98.97%) !important;
+        background-image: linear-gradient(
+            135.6deg,
+            #fe3678 0%,
+            #0764eb 98.97%
+        ) !important;
     }
 }
