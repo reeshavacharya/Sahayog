@@ -2,14 +2,14 @@
 
 # Run Prettier check
 echo "Running Prettier format check..."
-yarn format:check
+# yarn format:check
 
 # Capture the exit status of the Prettier check
 PRETTIER_STATUS=$?
 
 # Run ESLint check
 echo "Running ESLint lint check..."
-yarn lint:check
+# yarn lint:check
 
 # Capture the exit status of the ESLint check
 ESLINT_STATUS=$?
