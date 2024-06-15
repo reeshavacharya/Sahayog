@@ -1387,6 +1387,7 @@ export default {
     plugins: [
         require('@tailwindcss/typography'),
         require('@tailwindcss/forms'),
+        require('daisyui'),
         require('tailwind-scrollbar')({ nocompatible: true }),
         ({ addComponents }: any) => {
             addComponents({

@@ -18,8 +18,9 @@ const Login = () => {
             <>
                 <p className="poppins-thin text-black">Welcome, {firstName}</p>
                 &nbsp;
+                &nbsp;
                 <span
-                    className="btn btn-ghost poppins-thin text-black"
+                    className="btn btn-outline btn-error poppins-thin text-black"
                     onClick={() => signOut()}
                 >
                     Sign Out
@@ -29,7 +30,7 @@ const Login = () => {
     }
     return (
         <span
-            className="btn btn-ghost poppins-thin text-black"
+            className="btn btn-wide btn-outline btn-success poppins-thin text-black"
             onClick={() => signIn('google')}
         >
             Login
