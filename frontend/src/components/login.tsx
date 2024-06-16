@@ -3,6 +3,7 @@
 import { signIn, signOut, useSession } from 'next-auth/react';
 import Image from 'next/image';
 import Link from 'next/link';
+import UserMenu from './userMenu';
 
 const Login = () => {
     const { data: session } = useSession();
@@ -27,17 +28,13 @@ const Login = () => {
                     width={40}
                     className="rounded-full"
                 />
-                <p className="poppins-thin text-lg font-medium text-black">
+                &nbsp;
+                <p className="poppins-thin text-black">
                     {getFirstName(session.user.name || '')}
                 </p>
             </Link>
-            &nbsp; &nbsp;
-            <span
-                className="poppins-thin btn btn-outline btn-error text-black"
-                onClick={() => signOut()}
-            >
-                Sign Out
-            </span>
+            &nbsp;
+            <UserMenu/>
         </div>
     ) : (
         <span
