@@ -1,6 +1,6 @@
 import { signOut } from "next-auth/react"
 import Image from 'next/image';
-import downArrow from '../components/Icons/downArrow.svg'
+import downArrow from '../assets/icons/downArrow.svg'
 
 const UserMenu = () => {
     return (
