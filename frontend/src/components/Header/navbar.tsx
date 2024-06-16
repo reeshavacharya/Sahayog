@@ -4,7 +4,7 @@ import Login from '../login';
 
 const Navbar = () => {
     return (
-        <nav className="navbar rounded-b-lg bg-white p-4 shadow-lg">
+        <nav className="flex justify-between rounded-b-lg bg-brand-100 p-4 shadow-lg">
             <div className="flex-1">
                 <Link href="/" passHref>
                     <span className="poppins-thin cursor-pointer text-xl text-green-800">

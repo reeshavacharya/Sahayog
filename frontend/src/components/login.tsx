@@ -2,6 +2,7 @@
 
 import { signIn, signOut, useSession } from 'next-auth/react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Login = () => {
     const { data: session } = useSession();
@@ -17,17 +18,19 @@ const Login = () => {
     };
 
     return session && session.user ? (
-        <div className="flex items-center gap-2">
-            <Image
-                src={session.user.image || ''}
-                alt={session.user.name || ''}
-                height={40}
-                width={40}
-                className="rounded-full"
-            />
-            <p className="poppins-thin text-black">
-                {getFirstName(session.user.name || '')}
-            </p>
+        <div className="flex cursor-pointer items-center gap-2">
+            <Link href="/profile" className='flex flex-row gap-2 items-center'>
+                <Image
+                    src={session.user.image || ''}
+                    alt={session.user.name || ''}
+                    height={40}
+                    width={40}
+                    className="rounded-full"
+                />
+                <p className="poppins-thin text-lg font-medium text-black">
+                    {getFirstName(session.user.name || '')}
+                </p>
+            </Link>
             &nbsp; &nbsp;
             <span
                 className="poppins-thin btn btn-outline btn-error text-black"
