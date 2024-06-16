@@ -1,24 +1,60 @@
-import { signOut } from "next-auth/react"
+import { useState, useRef, useEffect } from 'react';
+import { signOut } from "next-auth/react";
 import Image from 'next/image';
-import downArrow from '../assets/icons/downArrow.svg'
+import downArrow from '../assets/icons/downArrow.svg';
 
-const UserMenu = () => {
+const UserMenu: React.FC = () => {
+    const [isRotated, setIsRotated] = useState<boolean>(false);
+    const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+    const dropdownRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+                setIsRotated(false); // Reset arrow to original position
+                setIsMenuOpen(false); // Close menu
+            }
+        };
+
+        document.addEventListener('click', handleClickOutside);
+
+        return () => {
+            document.removeEventListener('click', handleClickOutside);
+        };
+    }, []);
+
+    const handleButtonClick = () => {
+        setIsRotated(prev => !prev);
+        setIsMenuOpen(prev => !prev);
+    };
+
+    const handleLogout = () => {
+        signOut({ callbackUrl: '/' });
+    };
+
     return (
-        <div className="dropdown dropdown-bottom dropdown-left">
+        <div className="dropdown dropdown-bottom dropdown-left" ref={dropdownRef}>
             <button
-                className="poppins-thin btn btn-circle btn-ghost text-black">
-                <Image src={downArrow}
+                className={`poppins-thin btn btn-circle btn-ghost text-black ${isRotated ? 'rotate-180' : ''}`}
+                onClick={handleButtonClick}
+            >
+                <Image
+                    src={downArrow}
                     alt={'D'}
                     height={15}
                     width={15}
-                    className="rounded-full" />
+                    className="rounded-full"
+                />
             </button>
-            <ul tabIndex={0} className="poppins-medium dropdown-content z-[1] menu p-4 shadow bg-brand-100 rounded-box w-52 darker-shadow">
-                <li><a href="/">Home</a></li>
-                <li><a href="/profile">Profile</a></li>
-                <li><a className="text-error" onClick={() => signOut({ callbackUrl: '/' })}>Log Out</a></li>
-            </ul>
+            {isMenuOpen && (
+                <ul tabIndex={0} className="poppins-medium dropdown-content z-[1] menu p-4 shadow bg-brand-100 rounded-box w-52 darker-shadow">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/profile">Profile</a></li>
+                    <li><a className="text-error" onClick={handleLogout}>Log Out</a></li>
+                </ul>
+            )}
         </div>
-    )
-}
-export default UserMenu
+    );
+};
+
+export default UserMenu;
