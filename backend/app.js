@@ -13,10 +13,12 @@ app.use(morgan("dev"));
 
 app.get("/api/ping", (req, res) => {
   return res.status(200).json({
-    message: "All working good",
+    message: "All working good for now",
   });
 });
 
 app.listen(process.env.PORT, () => {
   console.log(`Server is running on port ${process.env.PORT}`);
 });
+
+

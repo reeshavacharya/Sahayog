@@ -1,13 +1,14 @@
 'use client';
 
-import { signIn, signOut, useSession } from 'next-auth/react';
+import { signIn, useSession } from 'next-auth/react';
 import Image from 'next/image';
 import Link from 'next/link';
+
 import UserMenu from './userMenu';
 
 const Login = () => {
     const { data: session } = useSession();
-    console.log('test', session);
+    console.log('test', session?.user);
 
     const getFirstName = (fullName: string): string => {
         const firstSpaceIndex = fullName.indexOf(' ');
@@ -20,7 +21,7 @@ const Login = () => {
 
     return session && session.user ? (
         <div className="flex cursor-pointer items-center gap-2">
-            <Link href="/profile" className='flex flex-row gap-2 items-center'>
+            <Link href="/profile" className="flex flex-row items-center gap-2">
                 <Image
                     src={session.user.image || ''}
                     alt={session.user.name || ''}
@@ -34,7 +35,7 @@ const Login = () => {
                 </p>
             </Link>
             &nbsp;
-            <UserMenu/>
+            <UserMenu />
         </div>
     ) : (
         <span
