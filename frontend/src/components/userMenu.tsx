@@ -2,6 +2,9 @@ import { useState, useRef, useEffect } from 'react';
 import { signOut } from "next-auth/react";
 import Image from 'next/image';
 import downArrow from '../assets/icons/downArrow.svg';
+import { MdLogout } from "react-icons/md";
+import { IoHome } from "react-icons/io5";
+import { FaUser } from "react-icons/fa";
 
 const UserMenu: React.FC = () => {
     const [isRotated, setIsRotated] = useState<boolean>(false);
@@ -48,9 +51,10 @@ const UserMenu: React.FC = () => {
             </button>
             {isMenuOpen && (
                 <ul tabIndex={0} className="poppins-medium dropdown-content z-[1] menu p-4 shadow bg-brand-100 rounded-box w-52 darker-shadow">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/profile">Profile</a></li>
-                    <li><a className="text-error" onClick={handleLogout}>Log Out</a></li>
+                    <li><a href="/"><IoHome/> Home</a></li>
+                    <li><a href="/profile"> <FaUser/> Profile</a></li>
+                    <li><a className="text-error" onClick={handleLogout}>
+                    <MdLogout/>Log Out</a></li>
                 </ul>
             )}
         </div>

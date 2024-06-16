@@ -3,6 +3,12 @@ import Image from 'next/image';
 import { signIn, useSession } from 'next-auth/react';
 import { useState, useEffect } from 'react';
 import HeaderAndFooterLayout from '@app/shared/HOC/HeaderAndFooterLayout';
+import { FaUser } from "react-icons/fa";
+import { BiSolidDonateHeart } from "react-icons/bi";
+import { FaPiggyBank } from "react-icons/fa6";
+import { FaPenNib } from "react-icons/fa6";
+import { FaStar } from "react-icons/fa";
+import { IoMdNotifications } from "react-icons/io";
 
 const ProfilePage = () => {
     const { data: session, status } = useSession();
@@ -46,6 +52,7 @@ const ProfilePage = () => {
                                     className={`${activeItem === 'Public Profile' ? 'bg-brand-200 hover:bg-brand-300' : ''}`}
                                     onClick={() => handleItemClick('Public Profile')}
                                 >
+                                    <FaUser/> 
                                     Public Profile
                                 </a>
                             </li>
@@ -55,6 +62,7 @@ const ProfilePage = () => {
                                     className={`${activeItem === 'Donations' ? 'bg-brand-200 hover:bg-brand-300' : ''}`}
                                     onClick={() => handleItemClick('Donations')}
                                 >
+                                    <BiSolidDonateHeart/>
                                     Donations
                                 </a>
                             </li>
@@ -64,6 +72,7 @@ const ProfilePage = () => {
                                     className={`${activeItem === 'Funds' ? 'bg-brand-200 hover:bg-brand-300' : ''}`}
                                     onClick={() => handleItemClick('Funds')}
                                 >
+                                    <FaPiggyBank/>
                                     Funds
                                 </a>
                             </li>
@@ -73,6 +82,7 @@ const ProfilePage = () => {
                                     className={`${activeItem === 'Your Blogs' ? 'bg-brand-200 hover:bg-brand-300' : ''}`}
                                     onClick={() => handleItemClick('Your Blogs')}
                                 >
+                                    <FaPenNib/>
                                     Your Blogs
                                 </a>
                             </li>
@@ -82,6 +92,7 @@ const ProfilePage = () => {
                                     className={`${activeItem === 'Saved Blogs' ? 'bg-brand-200 hover:bg-brand-300' : ''}`}
                                     onClick={() => handleItemClick('Saved Blogs')}
                                 >
+                                    <FaStar/>
                                     Saved Blogs
                                 </a>
                             </li>
@@ -91,6 +102,7 @@ const ProfilePage = () => {
                                     className={`${activeItem === 'Notifications' ? 'bg-brand-200 hover:bg-brand-300' : ''}`}
                                     onClick={() => handleItemClick('Notifications')}
                                 >
+                                    <IoMdNotifications/>
                                     Notifications
                                 </a>
                             </li>
