@@ -13,7 +13,7 @@ app.use(morgan("dev"));
 
 app.get("/api/ping", (req, res) => {
   return res.status(200).json({
-    message: "All working good",
+    message: "All working good for now",
   });
 });
 
