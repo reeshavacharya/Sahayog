@@ -1,7 +1,7 @@
-import Footer from '@app/components/Footer/footer';
-import Navbar from '@app/components/Header/navbar'
-import Slider from '@app/components/slider';
-import Title from '@app/components/title';
+import Footer from '../components/Footer/footer';
+import Navbar from '../components/Header/navbar';
+import Slider from '../components/slider';
+import Title from '../components/title';
 
 
 export default function Home() {
