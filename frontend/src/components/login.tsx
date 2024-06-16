@@ -4,6 +4,7 @@ import { signIn, signOut, useSession } from 'next-auth/react';
 
 const Login = () => {
     const { data: session } = useSession();
+    console.log('test', session);
     const getFirstName = (fullName: string): string => {
         const firstSpaceIndex = fullName.indexOf(' ');
         if (firstSpaceIndex === -1) {
@@ -17,10 +18,9 @@ const Login = () => {
         return (
             <>
                 <p className="poppins-thin text-black">Welcome, {firstName}</p>
-                &nbsp;
-                &nbsp;
+                &nbsp; &nbsp;
                 <span
-                    className="btn btn-outline btn-error poppins-thin text-black"
+                    className="poppins-thin btn btn-outline btn-error text-black"
                     onClick={() => signOut()}
                 >
                     Sign Out
@@ -30,7 +30,7 @@ const Login = () => {
     }
     return (
         <span
-            className="btn btn-wide btn-outline btn-success poppins-thin text-black"
+            className="poppins-thin btn btn-outline btn-success btn-wide text-black"
             onClick={() => signIn('google')}
         >
             Login
