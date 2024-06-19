@@ -15,5 +15,4 @@ model User {
   email String  @unique
   name  String?
   image String
-  token String?
 }
