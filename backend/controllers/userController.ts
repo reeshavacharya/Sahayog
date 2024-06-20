@@ -32,4 +32,9 @@ export default class Users {
     });
     res.status(201).send(userResponse);
   }
+
+  public static async logoutUser(req:Request,res:Response):Promise<void>{
+    res.clearCookie("access_token");
+    res.status(200).json({ message: "User logged out successfully" });
+  }
 }
