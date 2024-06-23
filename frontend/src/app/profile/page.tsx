@@ -24,10 +24,6 @@ const ProfilePage = () => {
         }
     }, [status]);
 
-    if (status === 'loading') {
-        return <div>Loading...</div>;
-    }
-
     if (session?.user) {
         return (
             <HeaderAndFooterLayout>

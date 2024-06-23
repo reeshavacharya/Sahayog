@@ -100,6 +100,11 @@ b {
     overflow: auto;
 }
 
+.disabled-input {
+    background-color: #ffffff; /* Set the desired normal background color */
+    /* Add any additional styling for disabled inputs */
+}
+
 .geIUsg div:first-child {
     white-space: nowrap;
     overflow: visible !important;

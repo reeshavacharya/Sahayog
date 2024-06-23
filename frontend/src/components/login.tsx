@@ -4,19 +4,10 @@ import { signIn, useSession } from 'next-auth/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import UserMenu from './userMenu';
-
+import { getFirstName } from '@app/utils/userUtils';
 const Login = () => {
     const { data: session } = useSession();
     console.log('test', session?.user);
-
-    const getFirstName = (fullName: string): string => {
-        const firstSpaceIndex = fullName.indexOf(' ');
-        if (firstSpaceIndex === -1) {
-            return fullName;
-        } else {
-            return fullName.substring(0, firstSpaceIndex);
-        }
-    };
 
     return session && session.user ? (
         <div className="flex cursor-pointer items-center gap-2">
